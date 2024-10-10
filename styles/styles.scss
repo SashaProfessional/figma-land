@@ -100,14 +100,13 @@ header {
     display: flex;
     height: 107px;
     align-items: center;
+    justify-content: space-between;
 
     @media (min-width: 800px) {
       width: 70%;
     }
 
     .logo-wrapper {
-      flex: 1;
-
       .logo {
         margin-left: 34px;
         width: 186px;
@@ -115,19 +114,39 @@ header {
       }
     }
 
-    .login-button {
-      @media (max-width: 450px) {
-        display: none;
+    ul {
+      flex-direction: row;
+      gap: 31px;
+      display: none;
+
+      @media (min-width: 1050px) {
+        display: flex;
+      }
+
+      li {
+        @include link-text();
+        padding: 10px;
       }
     }
 
-    .menu-icon {
-      margin: 28px 16px;
-      width: 66px;
-      height: 53px;
+    .right-panel {
+      display: flex;
+      align-items: center;
 
-      @media (min-width: 800px) {
-        display: none;
+      .login-button {
+        @media (max-width: 450px) {
+          display: none;
+        }
+      }
+
+      .menu-icon {
+        margin: 28px 16px;
+        width: 66px;
+        height: 53px;
+
+        @media (min-width: 1050px) {
+          display: none;
+        }
       }
     }
   }

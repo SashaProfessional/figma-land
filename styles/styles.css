@@ -57,32 +57,50 @@ header .header-content {
   display: flex;
   height: 107px;
   align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 800px) {
   header .header-content {
     width: 70%;
   }
 }
-header .header-content .logo-wrapper {
-  flex: 1;
-}
 header .header-content .logo-wrapper .logo {
   margin-left: 34px;
   width: 186px;
   height: 58px;
 }
+header .header-content ul {
+  flex-direction: row;
+  gap: 31px;
+  display: none;
+}
+@media (min-width: 1050px) {
+  header .header-content ul {
+    display: flex;
+  }
+}
+header .header-content ul li {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  padding: 10px;
+}
+header .header-content .right-panel {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 450px) {
-  header .header-content .login-button {
+  header .header-content .right-panel .login-button {
     display: none;
   }
 }
-header .header-content .menu-icon {
+header .header-content .right-panel .menu-icon {
   margin: 28px 16px;
   width: 66px;
   height: 53px;
 }
-@media (min-width: 800px) {
-  header .header-content .menu-icon {
+@media (min-width: 1050px) {
+  header .header-content .right-panel .menu-icon {
     display: none;
   }
 }
