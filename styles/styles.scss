@@ -1,0 +1,212 @@
+@mixin headline-text {
+  font-size: 52px;
+  line-height: 62px;
+  letter-spacing: 0.2px;
+
+  @media (min-width: 800px) {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@mixin title-text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+}
+
+@mixin sub-heading-text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+
+@mixin button-text {
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+}
+
+@mixin subtitle-text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+@mixin paragraph-text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+@mixin link-text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+@mixin mobile-menu-text {
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.2px;
+}
+
+html {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.primary-button {
+  border: none;
+  background-color: #4452fe;
+}
+
+.secondary-button {
+  border: none;
+  background-color: transparent;
+  outline: 1px solid white;
+}
+
+.button {
+  @include button-text;
+  padding: 13.5px 45px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  text-wrap: balance;
+  text-align: center;
+
+  .headline-text {
+    @include headline-text();
+    width: 60%;
+  }
+  .sub-heading-text {
+    @include sub-heading-text();
+    margin-bottom: 57px;
+    width: 75%;
+  }
+}
+
+header {
+  .header-content {
+    margin: 0 auto;
+    display: flex;
+    height: 107px;
+    align-items: center;
+
+    @media (min-width: 800px) {
+      width: 70%;
+    }
+
+    .logo-wrapper {
+      flex: 1;
+
+      .logo {
+        margin-left: 34px;
+        width: 186px;
+        height: 58px;
+      }
+    }
+
+    .login-button {
+      @media (max-width: 450px) {
+        display: none;
+      }
+    }
+
+    .menu-icon {
+      margin: 28px 16px;
+      width: 66px;
+      height: 53px;
+
+      @media (min-width: 800px) {
+        display: none;
+      }
+    }
+  }
+}
+
+main {
+  .intro-block {
+    margin: 57px 0 0;
+
+    @media (min-width: 450px) {
+      margin: 57px 75px 57px;
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 21px;
+
+      @media (min-width: 800px) {
+        flex-direction: row;
+        gap: 35px;
+      }
+    }
+  }
+
+  .dashboards {
+    background: linear-gradient(transparent, black);
+
+    img {
+      width: 100%;
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+  .features-block {
+    margin: 160px 0 0;
+
+    @media (min-width: 450px) {
+      margin: 160px 60px 220px; //TODO: maybe unify margins of blocks (this 60px)
+    }
+
+    .dashboard {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 100%;
+    }
+
+    .features-list {
+      margin: 27px 35px 0;
+
+      li {
+        margin: 20px;
+
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+
+        .feature-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .feature-icon {
+            height: 45px;
+          }
+
+          .feature-title {
+            @include title-text();
+          }
+        }
+
+        .feature-description {
+          @include paragraph-text();
+        }
+      }
+    }
+  }
+}
