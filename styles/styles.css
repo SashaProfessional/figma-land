@@ -289,4 +289,43 @@ main .gallery-block .photos-group img {
 main .gallery-block .buttons-wrapper {
   text-align: center;
   margin-top: 44px;
+}
+main .partners-block {
+  margin-top: 200px;
+}
+main .partners-block .icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+@media (min-width: 550px) {
+  main .partners-block .icons-wrapper {
+    gap: 50px;
+  }
+}
+@media (min-width: 1000px) {
+  main .partners-block .icons-wrapper {
+    flex-direction: row;
+  }
+}
+main .partners-block .icons-wrapper .icons-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+@media (min-width: 550px) {
+  main .partners-block .icons-wrapper .icons-group {
+    gap: 50px;
+  }
+}
+@media (min-width: 1000px) {
+  main .partners-block .icons-wrapper .icons-group {
+    height: 72px;
+  }
+}
+main .partners-block .buttons-wrapper {
+  margin-top: 63px;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

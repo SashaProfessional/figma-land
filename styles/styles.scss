@@ -350,4 +350,43 @@ main {
       margin-top: 44px;
     }
   }
+
+  .partners-block {
+    margin-top: 200px;
+
+    .icons-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+
+      @media (min-width: 550px) {
+        gap: 50px;
+      }
+
+      @media (min-width: 1000px) {
+        flex-direction: row;
+      }
+
+      .icons-group {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+
+        @media (min-width: 550px) {
+          gap: 50px;
+        }
+
+        @media (min-width: 1000px) {
+          height: 72px;
+        }
+      }
+    }
+
+    .buttons-wrapper {
+      margin-top: 63px;
+      text-align: center;
+    }
+  }
 }
