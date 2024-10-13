@@ -1,4 +1,6 @@
+//#region mixins
 @mixin headline-text {
+  font-weight: 500;
   font-size: 52px;
   line-height: 62px;
   letter-spacing: 0.2px;
@@ -11,6 +13,7 @@
 }
 
 @mixin title-text {
+  font-weight: 500;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.1px;
@@ -23,6 +26,7 @@
 }
 
 @mixin button-text {
+  font-weight: 500;
   font-size: 17px;
   line-height: 25px;
   letter-spacing: 0.2px;
@@ -41,6 +45,7 @@
 }
 
 @mixin link-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -51,10 +56,12 @@
   line-height: 45px;
   letter-spacing: 0.2px;
 }
+//#endregion
 
-html {
-  background-color: #181818;
-  color: #ffffff;
+//#region common classes
+.hide {
+  //TODO: remove
+  // display: none;
 }
 
 .primary-button {
@@ -92,6 +99,12 @@ html {
     margin-bottom: 57px;
     width: 75%;
   }
+}
+//#endregion mixins
+
+html {
+  background-color: #181818;
+  color: #ffffff;
 }
 
 header {
@@ -185,45 +198,100 @@ main {
   }
 
   .features-block {
-    margin: 160px 0 0;
+    margin: 160px 0;
 
     @media (min-width: 450px) {
       margin: 160px 60px 220px; //TODO: maybe unify margins of blocks (this 60px)
     }
 
-    .dashboard {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 100%;
+    .content-block {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 1000px) {
+        flex-direction: row;
+      }
+
+      .dashboard {
+        width: 100%;
+      }
+
+      .features-list {
+        margin: 27px 35px 0;flex-basis: 40%;
+
+        li {
+          margin: 20px;
+
+          &:not(:last-child) {
+            margin-bottom: 35px;
+          }
+
+          .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .feature-icon {
+              height: 45px;
+            }
+
+            .feature-title {
+              @include title-text();
+            }
+          }
+
+          .feature-description {
+            @include paragraph-text();
+          }
+        }
+      }
     }
+  }
 
-    .features-list {
-      margin: 27px 35px 0;
+  .contents-block {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      margin: 0 20px;
+      align-items: center;
 
-      li {
-        margin: 20px;
+      @media (min-width: 550px) {
+        margin: 0 100px;
+      }
 
-        &:not(:last-child) {
-          margin-bottom: 35px;
+      @media (min-width: 950px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+        max-width: 475px;
+
+        .title {
+          @include title-text();
+          color: black;
+          margin: 50px 120px 0;
         }
 
-        .feature-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-
-          .feature-icon {
-            height: 45px;
-          }
-
-          .feature-title {
-            @include title-text();
-          }
-        }
-
-        .feature-description {
+        .description {
           @include paragraph-text();
+          color: #5c5c5c;
+          margin: 20px 50px 40px;
+          text-wrap: balance;
+        }
+
+        img {
+          margin: 57px 0px 40px;
+          width: calc(100% - 50px);
         }
       }
     }
