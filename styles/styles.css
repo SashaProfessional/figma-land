@@ -313,6 +313,7 @@ main .partners-block .icons-wrapper {
 main .partners-block .icons-wrapper .icons-group {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 25px;
 }
 @media (min-width: 550px) {
@@ -328,4 +329,68 @@ main .partners-block .icons-wrapper .icons-group {
 main .partners-block .buttons-wrapper {
   margin-top: 63px;
   text-align: center;
+}
+main .testimonials-block {
+  margin-top: 200px;
+}
+main .testimonials-block .headline-text {
+  width: unset;
+}
+main .testimonials-block .testimonials-group-wrapper {
+  margin: 50px 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+@media (min-width: 550px) {
+  main .testimonials-block .testimonials-group-wrapper {
+    margin: 50px 100px 0;
+  }
+}
+@media (min-width: 1000px) {
+  main .testimonials-block .testimonials-group-wrapper {
+    flex-direction: row;
+    align-items: start;
+  }
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial {
+  border: 1px solid #565656;
+  border-radius: 10px;
+  padding: 30px 40px 30px 30px;
+  max-width: 350px;
+}
+@media (min-width: 550px) {
+  main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial {
+    padding: 40px 75px 40px 40px;
+  }
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial .profile {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial .profile .name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial .profile .role {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+main .testimonials-block .testimonials-group-wrapper .testimonials-group .testimonial .testimonial-text {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
 }/*# sourceMappingURL=styles.css.map */
