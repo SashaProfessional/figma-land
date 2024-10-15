@@ -282,6 +282,7 @@ main {
           @include title-text();
           color: black;
           margin: 50px 120px 0;
+          text-wrap: balance;
         }
 
         .description {
@@ -291,9 +292,18 @@ main {
           text-wrap: balance;
         }
 
-        img {
+        .image-wrapper {
           margin: 57px 0px 40px;
           width: calc(100% - 50px);
+
+          img {
+            object-fit: contain;
+            width: 100%;
+
+            &.notification-page {
+              margin: -20px 0 -30px;
+            }
+          }
         }
       }
     }
@@ -382,6 +392,10 @@ main {
 
         @media (min-width: 1000px) {
           height: 72px;
+        }
+
+        img {
+          width: 61px;
         }
       }
     }
@@ -513,12 +527,16 @@ footer {
           display: flex;
           align-items: center;
           gap: 10px;
-          margin-bottom: 10px;
           white-space: nowrap;
 
           img {
             height: 35px;
           }
+        }
+
+        .phone {
+          margin-top: 10px;
+          margin-bottom: 35px;
         }
 
         .media {

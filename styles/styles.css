@@ -227,6 +227,7 @@ main .contents-block .cards .card .title {
   letter-spacing: 0.1px;
   color: black;
   margin: 50px 120px 0;
+  text-wrap: balance;
 }
 main .contents-block .cards .card .description {
   font-size: 16px;
@@ -236,9 +237,17 @@ main .contents-block .cards .card .description {
   margin: 20px 50px 40px;
   text-wrap: balance;
 }
-main .contents-block .cards .card img {
+main .contents-block .cards .card .image-wrapper {
   margin: 57px 0px 40px;
   width: calc(100% - 50px);
+}
+main .contents-block .cards .card .image-wrapper img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+main .contents-block .cards .card .image-wrapper img.notification-page {
+  margin: -20px 0 -30px;
 }
 main .gallery-block {
   margin-top: 200px;
@@ -326,6 +335,9 @@ main .partners-block .icons-wrapper .icons-group {
   main .partners-block .icons-wrapper .icons-group {
     height: 72px;
   }
+}
+main .partners-block .icons-wrapper .icons-group img {
+  width: 61px;
 }
 main .partners-block .buttons-wrapper {
   margin-top: 63px;
@@ -459,12 +471,15 @@ footer .footer-groups-wrapper .contacts-wrapper .contacts .phone {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
   white-space: nowrap;
 }
 footer .footer-groups-wrapper .contacts-wrapper .contacts .address img,
 footer .footer-groups-wrapper .contacts-wrapper .contacts .phone img {
   height: 35px;
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts .phone {
+  margin-top: 10px;
+  margin-bottom: 35px;
 }
 footer .footer-groups-wrapper .contacts-wrapper .contacts .media {
   display: flex;
