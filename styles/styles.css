@@ -68,6 +68,7 @@ header .header-content {
 @media (min-width: 800px) {
   header .header-content {
     width: 70%;
+    max-width: 1200px;
   }
 }
 header .header-content .logo-wrapper .logo {
@@ -342,8 +343,7 @@ main .testimonials-block .testimonials-group-wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  gap: 25px;
 }
 @media (min-width: 550px) {
   main .testimonials-block .testimonials-group-wrapper {
@@ -393,4 +393,81 @@ main .testimonials-block .testimonials-group-wrapper .testimonials-group .testim
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.2px;
+}
+
+footer {
+  margin: 100px 0;
+}
+footer .footer-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 75px;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  margin: 0 50px;
+  margin: 0 50px;
+}
+@media (min-width: 450px) {
+  footer .footer-groups-wrapper {
+    margin: 0 120px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer-groups-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+@media (min-width: 950px) {
+  footer .footer-groups-wrapper {
+    flex-direction: row;
+  }
+}
+footer .footer-groups-wrapper .footer-links-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-groups-wrapper .footer-links-group .group-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  margin-bottom: 20px;
+}
+footer .footer-groups-wrapper .footer-links-group .footer-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+footer .footer-groups-wrapper .contacts-wrapper {
+  flex: 2;
+  display: flex;
+}
+@media (min-width: 950px) {
+  footer .footer-groups-wrapper .contacts-wrapper {
+    justify-content: flex-end;
+  }
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts {
+  display: inline-block;
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts .address,
+footer .footer-groups-wrapper .contacts-wrapper .contacts .phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts .address img,
+footer .footer-groups-wrapper .contacts-wrapper .contacts .phone img {
+  height: 35px;
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts .media {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }/*# sourceMappingURL=styles.css.map */
