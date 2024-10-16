@@ -135,12 +135,28 @@ main .intro-block .buttons-wrapper {
   }
 }
 main .dashboards {
-  background: linear-gradient(transparent, black);
+  overflow: hidden;
+  background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.013) 8.1%, hsla(0, 0%, 0%, 0.049) 15.5%, hsla(0, 0%, 0%, 0.104) 22.5%, hsla(0, 0%, 0%, 0.175) 29%, hsla(0, 0%, 0%, 0.259) 35.3%, hsla(0, 0%, 0%, 0.352) 41.2%, hsla(0, 0%, 0%, 0.45) 47.1%, hsla(0, 0%, 0%, 0.55) 52.9%, hsla(0, 0%, 0%, 0.648) 58.8%, hsla(0, 0%, 0%, 0.741) 64.7%, hsla(0, 0%, 0%, 0.825) 71%, hsla(0, 0%, 0%, 0.896) 77.5%, hsla(0, 0%, 0%, 0.951) 84.5%, hsla(0, 0%, 0%, 0.987) 91.9%, hsl(0, 0%, 0%) 100%);
 }
 main .dashboards img {
-  width: 100%;
+  width: 150%;
+  margin-left: -25%;
   position: relative;
   z-index: -1;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+@media (min-width: 800px) {
+  main .dashboards img {
+    margin-left: -10%;
+    width: 120%;
+  }
+}
+@media (min-width: 1000px) {
+  main .dashboards img {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 main .features-block {
   margin: 160px 0;
@@ -157,10 +173,20 @@ main .features-block .content-block {
 @media (min-width: 1000px) {
   main .features-block .content-block {
     flex-direction: row;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 main .features-block .content-block .dashboard {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 1000px) {
+  main .features-block .content-block .dashboard {
+    width: 60%;
+  }
 }
 main .features-block .content-block .features-list {
   margin: 27px 35px 0;
@@ -286,14 +312,15 @@ main .gallery-block .photos-group img {
   min-height: 0;
   width: 100%;
   max-width: 475px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (min-width: 1000px) {
   main .gallery-block .photos-group img {
     display: flex;
-    max-width: 230px;
-  }
-  main .gallery-block .photos-group img.high {
-    max-height: 215px;
+    max-width: unset;
+    width: unset;
+    max-height: 165px;
   }
 }
 main .gallery-block .buttons-wrapper {
@@ -485,4 +512,8 @@ footer .footer-groups-wrapper .contacts-wrapper .contacts .media {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+footer .footer-groups-wrapper .contacts-wrapper .contacts .media img {
+  width: 41px;
+  height: 41px;
 }/*# sourceMappingURL=styles.css.map */
