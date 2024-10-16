@@ -2,8 +2,10 @@
   border: none;
   background-color: #4452fe;
 }
-.primary-button:hover {
-  background-color: #3543e3;
+@media (hover: hover) {
+  .primary-button:hover {
+    background-color: #3543e3;
+  }
 }
 
 .secondary-button {
@@ -11,8 +13,10 @@
   background-color: transparent;
   outline: 1px solid white;
 }
-.secondary-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+@media (hover: hover) {
+  .secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .button {
@@ -24,6 +28,7 @@
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 .text-block {
@@ -59,6 +64,7 @@
 html {
   background-color: #181818;
   color: #ffffff;
+  font-family: "roboto", sans-serif;
 }
 
 header .header-content {

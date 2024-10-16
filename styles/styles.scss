@@ -63,8 +63,10 @@
   border: none;
   background-color: #4452fe;
 
-  &:hover {
-    background-color: #3543e3;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #3543e3;
+    }
   }
 }
 
@@ -73,8 +75,10 @@
   background-color: transparent;
   outline: 1px solid white;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
@@ -84,6 +88,7 @@
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 .text-block {
@@ -109,6 +114,8 @@
 html {
   background-color: #181818;
   color: #ffffff;
+
+  font-family: 'roboto', sans-serif;
 }
 
 header {
