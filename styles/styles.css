@@ -1,16 +1,18 @@
-.hide {
-  display: none !important;
-}
-
 .primary-button {
   border: none;
   background-color: #4452fe;
+}
+.primary-button:hover {
+  background-color: #3543e3;
 }
 
 .secondary-button {
   border: none;
   background-color: transparent;
   outline: 1px solid white;
+}
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .button {
@@ -21,6 +23,7 @@
   padding: 13.5px 45px;
   color: #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .text-block {
