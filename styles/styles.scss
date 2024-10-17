@@ -1,14 +1,18 @@
 //#region mixins
 @mixin headline-text {
   font-weight: 500;
-  font-size: 52px;
-  line-height: 62px;
+  font-size: 42px;
+  line-height: 52px;
   letter-spacing: 0.2px;
+
+  @media (min-width: 500px) {
+    font-size: 52px;
+    line-height: 62px;
+  }
 
   @media (min-width: 800px) {
     font-size: 80px;
     line-height: 88px;
-    letter-spacing: 0.2px;
   }
 }
 
@@ -300,7 +304,7 @@ main {
     margin: 160px 0;
 
     @media (min-width: 450px) {
-      margin: 160px 60px 220px; //TODO: maybe unify margins of blocks (this 60px)
+      margin: 160px 60px 220px;
     }
 
     .content-block {
@@ -525,7 +529,7 @@ main {
   }
 
   .testimonials-block {
-    margin-top: 200px; //TODO: maybe reuse
+    margin-top: 200px;
 
     .headline-text {
       width: unset;

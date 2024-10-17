@@ -45,16 +45,21 @@
 }
 .text-block .headline-text {
   font-weight: 500;
-  font-size: 52px;
-  line-height: 62px;
+  font-size: 42px;
+  line-height: 52px;
   letter-spacing: 0.2px;
   width: 60%;
+}
+@media (min-width: 500px) {
+  .text-block .headline-text {
+    font-size: 52px;
+    line-height: 62px;
+  }
 }
 @media (min-width: 800px) {
   .text-block .headline-text {
     font-size: 80px;
     line-height: 88px;
-    letter-spacing: 0.2px;
   }
 }
 .text-block .sub-heading-text {
