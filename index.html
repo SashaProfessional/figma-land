@@ -61,15 +61,26 @@
 
         <div class="right-panel">
           <button class="login-button secondary-button button">Login</button>
-          <img
-            class="menu-icon"
-            src="img/menu-icon.svg"
-            alt="menu icon"
-            width="66"
-            height="53"
-          />
+
+          <label for="menu-toggle" class="menu-icon">
+            <img
+              src="img/menu-icon.svg"
+              alt="menu icon"
+              width="66"
+              height="53"
+            />
+          </label>
         </div>
       </div>
+
+      <ul class="small-screen-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="login-link"><a href="#">Login</a></li>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      </ul>
     </header>
     <main>
       <div class="intro-block">
