@@ -135,6 +135,11 @@ header .header-content .right-panel .menu-icon {
     display: none;
   }
 }
+@media (hover: hover) {
+  header .header-content .right-panel .menu-icon:hover {
+    cursor: pointer;
+  }
+}
 
 main .intro-block {
   margin: 57px 0 57px;
